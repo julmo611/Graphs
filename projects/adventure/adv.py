@@ -96,6 +96,7 @@ while len(roomGraph) != len(visitedGraph):
             oppositeDirection = oppositeDirections[direction]
             
             visitedGraph[currentRoomId][direction] = newRoomId
+            visitedGraph[newRoomId][oppositeDirection] = currentRoomId
 
             currentRoomId = newRoomId 
             break
